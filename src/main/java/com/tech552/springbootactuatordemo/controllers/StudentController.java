@@ -16,26 +16,27 @@ public class StudentController {
     private StudentService studentService;
 
     @PostMapping("/student")
-    public void addStudent(@RequestBody Student student){
+    public void addStudent(@RequestBody Student student) {
         studentService.addStudent(student);
     }
 
     @GetMapping("/student")
-    public List<Student> getAllStudents(){
+    public List<Student> getAllStudents() {
         return studentService.getAllStudents();
     }
 
     @GetMapping("/student/{id}")
-    public Optional<Student> getStudentById(@PathVariable Long id){
+    public Optional<Student> getStudentById(@PathVariable Long id) {
         return studentService.getStudentById(id);
     }
 
     @PutMapping("/student/{id}")
-    public void updateStudent(@PathVariable Long id, @RequestBody Student student ){
+    public void updateStudent(@PathVariable Long id, @RequestBody Student student) {
         studentService.updateStudent(id, student);
     }
+
     @DeleteMapping("/student/{id}")
-    public void deleteStudent(@PathVariable Long id){
+    public void deleteStudent(@PathVariable Long id) {
         studentService.deleteStudent(id);
     }
 
