@@ -11,8 +11,10 @@ public class Student {
     private Long id;
 
     private String name;
-    private  String email;
-    public Student(){}
+    private String email;
+
+    public Student() {
+    }
 
     public Student(Long id, String name, String email) {
         this.id = id;
